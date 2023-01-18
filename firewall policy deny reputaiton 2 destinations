@@ -1,3 +1,4 @@
+# replace srcintf and dstintf with the your interfaces 
 config firewall policy
     edit 0
         set name "REP_2_deny_INT2EXT"
