@@ -1,0 +1,14 @@
+config firewall policy
+    edit 0
+        set name "REP_bad_deny_INT2EXT"
+        set srcintf "INTERNAL"
+        set dstintf "EXTERNAL"
+        set srcaddr "all"
+        set dstaddr "all"
+        set reputation-minimum 3
+        set schedule "always"
+        set service "ALL"
+        set logtraffic all
+        set comments "Deny traffic with a ISDB Reputation of 2 or 1 (lower than 3) from Internal Zone to External zone direction is destination"
+    next
+end
